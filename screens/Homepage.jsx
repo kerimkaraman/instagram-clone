@@ -1,10 +1,12 @@
-import { View, Text, SafeAreaView, ScrollView } from "react-native";
+import { View, Text, SafeAreaView, ScrollView, FlatList } from "react-native";
 import React from "react";
 import StoryItem from "../components/StoryItem";
+import { posts } from "../data";
+import PostItem from "../components/PostItem";
 
 export default function Homepage() {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="bg-white">
       <ScrollView
         horizontal={true}
         showsVerticalScrollIndicator={false}
@@ -15,14 +17,30 @@ export default function Homepage() {
           gap: 10,
         }}
       >
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
-        <StoryItem />
+        <StoryItem key={Math.random() * 10} />
+        <StoryItem key={Math.random() * 10} />
+        <StoryItem key={Math.random() * 10} />
+        <StoryItem key={Math.random() * 10} />
+        <StoryItem key={Math.random() * 10} />
+        <StoryItem key={Math.random() * 10} />
+        <StoryItem key={Math.random() * 10} />
       </ScrollView>
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={posts}
+        renderItem={(itemData) => {
+          return (
+            <PostItem
+              text={itemData.item.postDesc}
+              userId={itemData.item.userId}
+              postImg={itemData.item.postImg}
+            />
+          );
+        }}
+        keyExtractor={(item) => {
+          return item.postId;
+        }}
+      />
     </SafeAreaView>
   );
 }

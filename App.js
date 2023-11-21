@@ -86,14 +86,19 @@ export default function App() {
           options={{
             tabBarIcon: ({ focused }) => {
               return (
-                <Image
+                <View
+                  className="rounded-full"
                   style={{
                     borderColor: focused ? "black" : "none",
                     borderWidth: focused ? 2 : 0,
                   }}
-                  className="w-[24px] h-[24px] object-cover rounded-full"
-                  source={require("./assets/pfp.png")}
-                />
+                >
+                  <Image
+                    className="w-[24px] h-[24px] object-cover rounded-full"
+                    source={require("./assets/pfp.png")}
+                  />
+                </View>
+                /*  */
               );
             },
           }}
