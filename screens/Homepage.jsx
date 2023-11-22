@@ -6,7 +6,7 @@ import PostItem from "../components/PostItem";
 
 export default function Homepage() {
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView style={{ flex: 1 }} className="bg-white">
       <ScrollView
         horizontal={true}
         showsVerticalScrollIndicator={false}

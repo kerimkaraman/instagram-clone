@@ -98,7 +98,6 @@ export default function App() {
                     source={require("./assets/pfp.png")}
                   />
                 </View>
-                /*  */
               );
             },
           }}
