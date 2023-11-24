@@ -17,6 +17,10 @@ import {
 } from "@expo/vector-icons";
 import Swiper from "react-native-swiper";
 import CommentModal from "./CommentModal";
+import HeartIcon from "../assets/svg/HeartIcon";
+import SendIcon from "../assets/svg/SendIcon";
+import CommentIcon from "../assets/svg/CommentIcon";
+import SaveIcon from "../assets/svg/SaveIcon";
 
 export default function PostItem({ text, userId, postImg }) {
   const [user, setUser] = useState([]);
@@ -70,20 +74,18 @@ export default function PostItem({ text, userId, postImg }) {
                 setIsLiked(!isLiked);
               }}
             >
-              <Ionicons
-                name={isLiked ? "heart" : "md-heart-outline"}
-                size={32}
-                color={isLiked ? "red" : "black"}
-              />
+              <HeartIcon fillColor={isLiked ? "red" : "white"} />
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
                 setCommentHandler(!commentHandler);
               }}
             >
-              <FontAwesome name="comment-o" size={28} color="black" />
+              <CommentIcon />
             </TouchableOpacity>
-            <Feather name="send" size={28} color="black" />
+            <Pressable>
+              <SendIcon />
+            </Pressable>
           </View>
           <View>
             <TouchableOpacity
@@ -91,11 +93,7 @@ export default function PostItem({ text, userId, postImg }) {
                 setIsSaved(!isSaved);
               }}
             >
-              <Ionicons
-                name={isSaved ? "bookmark" : "bookmark-outline"}
-                size={28}
-                color="black"
-              />
+              <SaveIcon fillColor={isSaved ? "black" : "white"} />
             </TouchableOpacity>
           </View>
         </View>

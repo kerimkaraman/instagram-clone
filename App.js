@@ -7,6 +7,10 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import Homepage from "./screens/Homepage";
 import { useTheme } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
+import ReelsIcon from "./assets/svg/ReelsIcon";
+import AddPost from "./assets/svg/AddPost";
+import HomeIcon from "./assets/svg/HomeIcon";
+import SearchIcon from "./assets/svg/SearchIcon";
 
 export default function App() {
   const Tab = createMaterialBottomTabNavigator();
@@ -29,13 +33,7 @@ export default function App() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ focused }) => {
-              return (
-                <Ionicons
-                  name={focused ? "home" : "home-outline"}
-                  size={24}
-                  color="black"
-                />
-              );
+              return <HomeIcon fillColor={focused ? "black" : "white"} />;
             },
           }}
           name="Home"
@@ -44,13 +42,7 @@ export default function App() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ focused }) => {
-              return (
-                <Ionicons
-                  name={focused ? "search" : "search-outline"}
-                  size={24}
-                  color="black"
-                />
-              );
+              return <SearchIcon strokeWidth={focused ? 3 : 2} />;
             },
           }}
           name="Search"
@@ -59,9 +51,7 @@ export default function App() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ focused }) => {
-              return (
-                <Ionicons name="add-circle-outline" size={24} color="black" />
-              );
+              return <AddPost />;
             },
           }}
           name="Post"
@@ -70,13 +60,7 @@ export default function App() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ focused }) => {
-              return (
-                <Ionicons
-                  name="md-play-circle-outline"
-                  size={24}
-                  color="black"
-                />
-              );
+              return <ReelsIcon />;
             },
           }}
           name="Reels"
