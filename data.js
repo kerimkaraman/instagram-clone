@@ -92,14 +92,6 @@ export const posts = [
   },
   {
     postId: 13,
-    userId: 13,
-    postDesc: "The Office",
-    postImg: [
-      "https://www.nbc.com/sites/nbcblog/files/2023/07/the-office-jim-halpert.jpg",
-    ],
-  },
-  {
-    postId: 14,
     userId: 12,
     postDesc: "Mr Banderas.",
     postImg: [
