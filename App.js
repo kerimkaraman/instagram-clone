@@ -11,6 +11,7 @@ import ReelsIcon from "./assets/svg/ReelsIcon";
 import AddPost from "./assets/svg/AddPost";
 import HomeIcon from "./assets/svg/HomeIcon";
 import SearchIcon from "./assets/svg/SearchIcon";
+import Profile from "./screens/Profile";
 
 export default function App() {
   const Tab = createMaterialBottomTabNavigator();
@@ -67,6 +68,7 @@ export default function App() {
           component={Homepage}
         />
         <Tab.Screen
+          initialParams={{ isUser: true }}
           options={{
             tabBarIcon: ({ focused }) => {
               return (
@@ -86,18 +88,9 @@ export default function App() {
             },
           }}
           name="UserProfile"
-          component={Homepage}
+          component={Profile}
         />
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

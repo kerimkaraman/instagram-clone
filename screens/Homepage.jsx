@@ -6,18 +6,19 @@ import PostItem from "../components/PostItem";
 import TextLogo from "../assets/svg/TextLogo";
 import HeartIcon from "../assets/svg/HeartIcon";
 import MessageIcon from "../assets/svg/MessageIcon";
+import CommentModal from "../components/CommentModal";
 
 export default function Homepage() {
   return (
     <SafeAreaView style={{ flex: 1 }} className="bg-white">
-      <View className="px-4 flex-row justify-between items-center">
-        <TextLogo />
-        <View className="flex-row gap-x-5 items-center">
-          <HeartIcon fillColor="white" />
-          <MessageIcon />
-        </View>
-      </View>
       <ScrollView>
+        <View className="px-4 flex-row justify-between items-center">
+          <TextLogo />
+          <View className="flex-row gap-x-5 items-center">
+            <HeartIcon fillColor="white" />
+            <MessageIcon />
+          </View>
+        </View>
         <ScrollView
           horizontal={true}
           showsVerticalScrollIndicator={false}

@@ -1,8 +1,15 @@
 import { View, Text, Modal } from "react-native";
-import React, { useEffect } from "react";
-import CommentItem from "./CommentItem";
-import { users } from "../data";
+import React from "react";
 
 export default function CommentModal({ visibility }) {
-  return <Modal visible={visibility}></Modal>;
+  return (
+    <Modal
+      style={{ margin: 0, marginTop: 20, backgroundColor: "red" }}
+      visible={true}
+    >
+      <View style={{ flex: 1, marginTop: 10 }}>
+        <Text>deneme</Text>
+      </View>
+    </Modal>
+  );
 }
