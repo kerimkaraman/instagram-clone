@@ -1,13 +1,5 @@
 export const posts = [
   {
-    postId: 1,
-    userId: 2,
-    postDesc: "BJK",
-    postImg: [
-      "https://image.cnnturk.com/i/cnnturk/75/740x416/614c1ad670380e251833fd22.jpg",
-    ],
-  },
-  {
     postId: 2,
     userId: 2,
     postDesc: "This is for the fans that supports us all the time. ",
@@ -40,6 +32,78 @@ export const posts = [
     postDesc: "Big Win. Thanks for everything.",
     postImg: [
       "https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2022-06/Novak%20Djokovic%20Wimbledon%202021.jpg?itok=6NhqN_gD",
+    ],
+  },
+  {
+    postId: 6,
+    userId: 4,
+    postDesc: "The Goat.",
+    postImg: [
+      "https://ichef.bbci.co.uk/news/976/cpsprodpb/888C/production/_128065943_gettyimages-1450389057.jpg",
+    ],
+  },
+  {
+    postId: 7,
+    userId: 6,
+    postDesc: "New seasons started.",
+    postImg: [
+      "https://s22928.pcdn.co/wp-content/uploads/2023/11/LeBron-James-35.jpg",
+    ],
+  },
+  {
+    postId: 8,
+    userId: 7,
+    postDesc: "😬",
+    postImg: [
+      "https://variety.com/wp-content/uploads/2020/09/tenet4.jpg?w=1000",
+    ],
+  },
+  {
+    postId: 9,
+    userId: 10,
+    postDesc: "😶",
+    postImg: [
+      "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-08/230819-michael-jackson-mjf-1116-c14f4d.jpg",
+    ],
+  },
+  {
+    postId: 10,
+    userId: 9,
+    postDesc: "Stay hard fuckers",
+    postImg: [
+      "https://cdn.shopify.com/s/files/1/0712/0532/3044/files/David_Goggings_Stay_Hard_With_Log_600x600.jpg?v=1683128384",
+    ],
+  },
+  {
+    postId: 11,
+    userId: 11,
+    postDesc: "It's just started.",
+    postImg: [
+      "https://cdnuploads.aa.com.tr/uploads/Contents/2020/05/30/thumbs_b_c_085eafd63732e171b57a902b07c8097b.jpg",
+    ],
+  },
+  {
+    postId: 12,
+    userId: 13,
+    postDesc: "The Office",
+    postImg: [
+      "https://www.nbc.com/sites/nbcblog/files/2023/07/the-office-jim-halpert.jpg",
+    ],
+  },
+  {
+    postId: 13,
+    userId: 13,
+    postDesc: "The Office",
+    postImg: [
+      "https://www.nbc.com/sites/nbcblog/files/2023/07/the-office-jim-halpert.jpg",
+    ],
+  },
+  {
+    postId: 14,
+    userId: 12,
+    postDesc: "Mr Banderas.",
+    postImg: [
+      "https://www.wonderwall.com/wp-content/uploads/sites/2/2020/08/shutterstock_editorial_5877424e.jpg?w=700",
     ],
   },
 ];

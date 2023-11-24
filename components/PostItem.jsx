@@ -101,7 +101,7 @@ export default function PostItem({ text, userId, postImg }) {
         </View>
         <View className="mt-3">
           <View className="">
-            <Text className="flex-row gap-x-2 font-bold">
+            <Text className="flex-row gap-x-2 font-bold ml-1">
               {nickname}{" "}
               <Text className="font-normal flex-1 flex-wrap">{text}</Text>
             </Text>

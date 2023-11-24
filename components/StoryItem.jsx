@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
-export default function StoryItem() {
+export default function StoryItem({ nickname, img }) {
   return (
     <View className="justify-center items-center gap-y-2 p-2">
       <LinearGradient
@@ -17,11 +17,11 @@ export default function StoryItem() {
         ]}
       >
         <Image
-          className="w-[65px] h-[65px] object-cover rounded-full"
-          source={require("../assets/pfp.png")}
+          className="w-[60px] h-[60px] object-cover rounded-full"
+          source={{ uri: img }}
         />
       </LinearGradient>
-      <Text className="text-xs">kerimkaraman28</Text>
+      <Text className="text-xs">{nickname}</Text>
     </View>
   );
 }
