@@ -9,7 +9,7 @@ import ProfileTagged from "./ProfileTagged";
 export default function ProfileTabs() {
   const Tab = createMaterialTopTabNavigator();
   return (
-    <Tab.Navigator>
+    <Tab.Navigator className="mt-5">
       <Tab.Screen
         options={{
           title: () => {
