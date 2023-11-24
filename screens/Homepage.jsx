@@ -3,10 +3,20 @@ import React from "react";
 import StoryItem from "../components/StoryItem";
 import { posts, users } from "../data";
 import PostItem from "../components/PostItem";
+import TextLogo from "../assets/svg/TextLogo";
+import HeartIcon from "../assets/svg/HeartIcon";
+import MessageIcon from "../assets/svg/MessageIcon";
 
 export default function Homepage() {
   return (
     <SafeAreaView style={{ flex: 1 }} className="bg-white">
+      <View className="px-4 flex-row justify-between items-center">
+        <TextLogo />
+        <View className="flex-row gap-x-5 items-center">
+          <HeartIcon fillColor="white" />
+          <MessageIcon />
+        </View>
+      </View>
       <ScrollView>
         <ScrollView
           horizontal={true}
@@ -29,6 +39,7 @@ export default function Homepage() {
           renderItem={(itemData) => {
             return (
               <PostItem
+                likeCount={itemData.item.likeCount}
                 text={itemData.item.postDesc}
                 userId={itemData.item.userId}
                 postImg={itemData.item.postImg}

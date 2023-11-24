@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 
 export default function StoryItem({ nickname, img }) {
   return (
-    <View className="justify-center items-center gap-y-2 p-2">
+    <View key={nickname} className="justify-center items-center gap-y-2 p-2">
       <LinearGradient
         className="w-[70px] h-[70px] rounded-full flex items-center justify-center"
         colors={[
@@ -17,7 +17,7 @@ export default function StoryItem({ nickname, img }) {
         ]}
       >
         <Image
-          className="w-[60px] h-[60px] object-cover rounded-full"
+          className="w-[65px] h-[65px] object-cover rounded-full border-gray-300 border-[1px]"
           source={{ uri: img }}
         />
       </LinearGradient>

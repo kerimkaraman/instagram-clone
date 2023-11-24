@@ -7,6 +7,8 @@ export const posts = [
       "https://image.cnnturk.com/i/cnnturk/75/740x416/614c1ad670380e251833fd22.jpg",
       "https://image.cnnturk.com/i/cnnturk/75/740x416/614c1ad670380e251833fd22.jpg",
     ],
+    likeCount: "456,123",
+    shareDate: "1 day ago",
   },
   {
     postId: 3,
@@ -16,6 +18,8 @@ export const posts = [
       "https://frpnet.net/wp-content/uploads/2013/09/batman-joker-karakol.jpg",
       "https://img-s2.onedio.com/id-62bacfec14b1aef113123697/rev-0/w-600/h-400/f-jpg/s-1cbcb96230bbe070177085b0c8d57375a4170d85.jpg",
     ],
+    likeCount: "1,456,123",
+    shareDate: "November 7",
   },
   {
     postId: 4,
@@ -25,6 +29,8 @@ export const posts = [
       "https://www.reviewjournal.com/wp-content/uploads/2022/01/16105308_web1_Paul-Cranston-1.jpg?crop=1",
       "https://i.insider.com/5ec6d958988ee36d6c13644b?width=700",
     ],
+    likeCount: "1,786,127",
+    shareDate: "16 hours ago",
   },
   {
     postId: 5,
@@ -33,6 +39,8 @@ export const posts = [
     postImg: [
       "https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2022-06/Novak%20Djokovic%20Wimbledon%202021.jpg?itok=6NhqN_gD",
     ],
+    likeCount: "456,123",
+    shareDate: "November 22",
   },
   {
     postId: 6,
@@ -41,6 +49,8 @@ export const posts = [
     postImg: [
       "https://ichef.bbci.co.uk/news/976/cpsprodpb/888C/production/_128065943_gettyimages-1450389057.jpg",
     ],
+    likeCount: "80,456,123",
+    shareDate: "March 21",
   },
   {
     postId: 7,
@@ -49,6 +59,8 @@ export const posts = [
     postImg: [
       "https://s22928.pcdn.co/wp-content/uploads/2023/11/LeBron-James-35.jpg",
     ],
+    likeCount: "2,154,683",
+    shareDate: "August 2022",
   },
   {
     postId: 8,
@@ -57,6 +69,7 @@ export const posts = [
     postImg: [
       "https://variety.com/wp-content/uploads/2020/09/tenet4.jpg?w=1000",
     ],
+    shareDate: "December 1",
   },
   {
     postId: 9,
@@ -65,6 +78,8 @@ export const posts = [
     postImg: [
       "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-08/230819-michael-jackson-mjf-1116-c14f4d.jpg",
     ],
+    likeCount: "109,123",
+    shareDate: "July 13",
   },
   {
     postId: 10,
@@ -73,6 +88,8 @@ export const posts = [
     postImg: [
       "https://cdn.shopify.com/s/files/1/0712/0532/3044/files/David_Goggings_Stay_Hard_With_Log_600x600.jpg?v=1683128384",
     ],
+    likeCount: "196,123",
+    shareDate: "January 1",
   },
   {
     postId: 11,
@@ -81,6 +98,8 @@ export const posts = [
     postImg: [
       "https://cdnuploads.aa.com.tr/uploads/Contents/2020/05/30/thumbs_b_c_085eafd63732e171b57a902b07c8097b.jpg",
     ],
+    likeCount: "4,356,541",
+    shareDate: "April 12",
   },
   {
     postId: 12,
@@ -89,6 +108,8 @@ export const posts = [
     postImg: [
       "https://www.nbc.com/sites/nbcblog/files/2023/07/the-office-jim-halpert.jpg",
     ],
+    likeCount: "256,123",
+    shareDate: "June 12",
   },
   {
     postId: 13,
@@ -97,6 +118,8 @@ export const posts = [
     postImg: [
       "https://www.wonderwall.com/wp-content/uploads/sites/2/2020/08/shutterstock_editorial_5877424e.jpg?w=700",
     ],
+    likeCount: "2,456,123",
+    shareDate: "May 16",
   },
 ];
 
