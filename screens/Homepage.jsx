@@ -6,7 +6,7 @@ import PostItem from "../components/PostItem";
 import TextLogo from "../assets/svg/TextLogo";
 import HeartIcon from "../assets/svg/HeartIcon";
 import MessageIcon from "../assets/svg/MessageIcon";
-import Modal from "react-native-modal";
+import CommentModal from "../components/CommentModal";
 
 export default function Homepage() {
   return (
@@ -39,11 +39,7 @@ export default function Homepage() {
           }}
         />
       </ScrollView>
-      <Modal>
-        <View style={{ marginTop: 20 }}>
-          <Text>Deneme</Text>
-        </View>
-      </Modal>
+      <CommentModal />
     </SafeAreaView>
   );
 }
