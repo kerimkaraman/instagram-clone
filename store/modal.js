@@ -5,7 +5,6 @@ export const modalSlice = createSlice({
   initialState: {
     isOpened: false,
   },
-
   reducers: {
     toggleModal: (state) => {
       state.isOpened = !state.isOpened;

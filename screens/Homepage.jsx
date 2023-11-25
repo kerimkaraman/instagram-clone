@@ -19,7 +19,6 @@ export default function Homepage() {
             <MessageIcon />
           </View>
         </View>
-
         <FlatList
           showsVerticalScrollIndicator={false}
           ListHeaderComponent={UpperComponent}

@@ -8,9 +8,11 @@ import SendIcon from "../assets/svg/SendIcon";
 import CommentIcon from "../assets/svg/CommentIcon";
 import SaveIcon from "../assets/svg/SaveIcon";
 import AddComment from "./AddComment";
-import CommentModal from "./CommentModal";
+import { useDispatch } from "react-redux";
+import { toggleModal } from "../store/modal";
 
 export default function PostItem({ text, userId, postImg, likeCount }) {
+  const dispatch = useDispatch();
   const [user, setUser] = useState([]);
   const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
@@ -67,7 +69,7 @@ export default function PostItem({ text, userId, postImg, likeCount }) {
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => {
-                  setCommentHandler(!commentHandler);
+                  dispatch(toggleModal());
                 }}
               >
                 <CommentIcon />

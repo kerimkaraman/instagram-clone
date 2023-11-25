@@ -121,6 +121,36 @@ export const posts = [
     likeCount: "2,456,123",
     shareDate: "May 16",
   },
+  {
+    postId: 14,
+    userId: 14,
+    postDesc: "4th season is coming right up. ",
+    postImg: [
+      "https://m.media-amazon.com/images/M/MV5BZGFiNDhjODYtODk2NC00NzcxLWE4OTktM2NhNzFhMWFkYTdiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+    ],
+    likeCount: "355,083",
+    shareDate: "November 25",
+  },
+  {
+    postId: 15,
+    userId: 15,
+    postDesc: "Legend",
+    postImg: [
+      "https://people.com/thmb/ddT5nK3AdgtE7Dus6sjb3O-DzjQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/hugh-jackman-the-wolverine-011023-1-721c2d71ae1e4770aa4f960ac8505a21.jpg",
+    ],
+    likeCount: "4,355,083",
+    shareDate: "November 25",
+  },
+  {
+    postId: 16,
+    userId: 4,
+    postDesc: "Una gran victoria",
+    postImg: [
+      "https://cdnuploads.aa.com.tr/uploads/Contents/2023/10/04/thumbs_b_c_260b7d4edad37c929813f99479e8272c.jpg",
+    ],
+    likeCount: "30,355,083",
+    shareDate: "November 25",
+  },
 ];
 
 export const users = [
@@ -214,5 +244,19 @@ export const users = [
     namesurname: "John Krasinski",
     profile_img:
       "https://cdn.britannica.com/41/218341-050-51D8903F/American-actor-John-Krasinski-2020.jpg",
+  },
+  {
+    userId: 14,
+    nickname: "karlurban",
+    namesurname: "Karl Urban",
+    profile_img:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Karl_Urban_by_Gage_Skidmore_2.jpg/440px-Karl_Urban_by_Gage_Skidmore_2.jpg",
+  },
+  {
+    userId: 15,
+    nickname: "hughjackman",
+    namesurname: "Hugh Jackman",
+    profile_img:
+      "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_.jpg",
   },
 ];
