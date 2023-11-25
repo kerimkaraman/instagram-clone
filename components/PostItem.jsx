@@ -9,14 +9,13 @@ import CommentIcon from "../assets/svg/CommentIcon";
 import SaveIcon from "../assets/svg/SaveIcon";
 import AddComment from "./AddComment";
 import { useDispatch } from "react-redux";
-import { toggleModal } from "../store/modal";
+import { toggleCommentModal, toggleShareModal } from "../store/modal";
 
 export default function PostItem({ text, userId, postImg, likeCount }) {
   const dispatch = useDispatch();
   const [user, setUser] = useState([]);
   const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
-  const [commentHandler, setCommentHandler] = useState(false);
   let nickname;
   useEffect(() => {
     setUser(users.filter((user) => user.userId == userId));
@@ -30,7 +29,7 @@ export default function PostItem({ text, userId, postImg, likeCount }) {
           return (
             <View
               className="flex flex-row items-center justify-between px-2"
-              id={index}
+              key={index}
             >
               <View className="flex flex-row items-center gap-2">
                 <Image
@@ -69,12 +68,16 @@ export default function PostItem({ text, userId, postImg, likeCount }) {
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => {
-                  dispatch(toggleModal());
+                  dispatch(toggleCommentModal());
                 }}
               >
                 <CommentIcon />
               </TouchableOpacity>
-              <Pressable>
+              <Pressable
+                onPress={() => {
+                  dispatch(toggleShareModal());
+                }}
+              >
                 <SendIcon />
               </Pressable>
             </View>

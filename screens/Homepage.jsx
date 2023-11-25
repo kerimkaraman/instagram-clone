@@ -7,6 +7,7 @@ import TextLogo from "../assets/svg/TextLogo";
 import HeartIcon from "../assets/svg/HeartIcon";
 import MessageIcon from "../assets/svg/MessageIcon";
 import CommentModal from "../components/CommentModal";
+import ShareModal from "../components/ShareModal";
 
 export default function Homepage() {
   return (
@@ -39,6 +40,7 @@ export default function Homepage() {
         />
       </ScrollView>
       <CommentModal />
+      <ShareModal />
     </SafeAreaView>
   );
 }

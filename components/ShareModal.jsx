@@ -1,15 +1,15 @@
-import { View, Text, Modal, Button } from "react-native";
+import { View, Text, Button, Modal } from "react-native";
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { toggleCommentModal } from "../store/modal";
+import { toggleShareModal } from "../store/modal";
+import { useDispatch, useSelector } from "react-redux";
 
-export default function CommentModal() {
+export default function ShareModal() {
   const dispatch = useDispatch();
-  const { isCommentOpened } = useSelector((state) => state.modal);
+  const { isShareOpened } = useSelector((state) => state.modal);
   return (
     <View style={{ flex: 1 }}>
       <Modal
-        visible={isCommentOpened}
+        visible={isShareOpened}
         animationType="slide"
         transparent={true}
         className="mt-[300px]"
@@ -25,7 +25,7 @@ export default function CommentModal() {
           <Button
             title="Close"
             onPress={() => {
-              dispatch(toggleCommentModal());
+              dispatch(toggleShareModal());
             }}
           />
           <Text>Deneme</Text>

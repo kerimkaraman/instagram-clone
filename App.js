@@ -14,14 +14,20 @@ import { store } from "./store/store";
 import Search from "./screens/Search";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainScreen from "./screens/MainScreen";
+import SinglePost from "./components/SinglePost";
 export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
           <Stack.Screen name="MainScreen" component={MainScreen} />
+          <Stack.Screen name="SinglePost" component={SinglePost} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

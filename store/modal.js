@@ -3,14 +3,18 @@ import { createSlice } from "@reduxjs/toolkit";
 export const modalSlice = createSlice({
   name: "modal",
   initialState: {
-    isOpened: false,
+    isCommentOpened: false,
+    isShareOpened: false,
   },
   reducers: {
-    toggleModal: (state) => {
-      state.isOpened = !state.isOpened;
+    toggleCommentModal: (state) => {
+      state.isCommentOpened = !state.isCommentOpened;
+    },
+    toggleShareModal: (state) => {
+      state.isShareOpened = !state.isShareOpened;
     },
   },
 });
 
-export const { toggleModal } = modalSlice.actions;
+export const { toggleCommentModal, toggleShareModal } = modalSlice.actions;
 export default modalSlice.reducer;
