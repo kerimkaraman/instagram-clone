@@ -1,16 +1,8 @@
-import {
-  View,
-  Text,
-  Image,
-  Pressable,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-} from "react-native";
+import { View, Text, Image, Pressable, TouchableOpacity } from "react-native";
 import React, { useEffect, useState } from "react";
 import { users } from "../data";
 import { Entypo } from "@expo/vector-icons";
 import Swiper from "react-native-swiper";
-import CommentModal from "./CommentModal";
 import HeartIcon from "../assets/svg/HeartIcon";
 import SendIcon from "../assets/svg/SendIcon";
 import CommentIcon from "../assets/svg/CommentIcon";

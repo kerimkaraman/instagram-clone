@@ -6,7 +6,7 @@ import PostItem from "../components/PostItem";
 import TextLogo from "../assets/svg/TextLogo";
 import HeartIcon from "../assets/svg/HeartIcon";
 import MessageIcon from "../assets/svg/MessageIcon";
-import CommentModal from "../components/CommentModal";
+import Modal from "react-native-modal";
 
 export default function Homepage() {
   return (
@@ -19,23 +19,10 @@ export default function Homepage() {
             <MessageIcon />
           </View>
         </View>
-        <ScrollView
-          horizontal={true}
-          showsVerticalScrollIndicator={false}
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={{
-            display: "flex",
-            flexDirection: "row",
-            gap: 10,
-          }}
-        >
-          {users.map((user) => {
-            const { profile_img, nickname } = user;
-            return <StoryItem nickname={nickname} img={profile_img} />;
-          })}
-        </ScrollView>
+
         <FlatList
           showsVerticalScrollIndicator={false}
+          ListHeaderComponent={UpperComponent}
           data={posts}
           renderItem={(itemData) => {
             return (
@@ -52,6 +39,31 @@ export default function Homepage() {
           }}
         />
       </ScrollView>
+      <Modal>
+        <View style={{ marginTop: 20 }}>
+          <Text>Deneme</Text>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
+
+const UpperComponent = () => {
+  return (
+    <ScrollView
+      horizontal={true}
+      showsVerticalScrollIndicator={false}
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={{
+        display: "flex",
+        flexDirection: "row",
+        gap: 10,
+      }}
+    >
+      {users.map((user, index) => {
+        const { profile_img, nickname } = user;
+        return <StoryItem key={index} nickname={nickname} img={profile_img} />;
+      })}
+    </ScrollView>
+  );
+};
