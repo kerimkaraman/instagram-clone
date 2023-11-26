@@ -15,6 +15,7 @@ import Search from "./screens/Search";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainScreen from "./screens/MainScreen";
 import SinglePost from "./components/SinglePost";
+import UserProfile from "./screens/UserProfile";
 export default function App() {
   const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,7 @@ export default function App() {
         >
           <Stack.Screen name="MainScreen" component={MainScreen} />
           <Stack.Screen name="SinglePost" component={SinglePost} />
-          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="Profile" component={UserProfile} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
