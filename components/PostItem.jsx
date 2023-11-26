@@ -10,9 +10,11 @@ import SaveIcon from "../assets/svg/SaveIcon";
 import AddComment from "./AddComment";
 import { useDispatch } from "react-redux";
 import { toggleCommentModal, toggleShareModal } from "../store/modal";
+import { useNavigation } from "@react-navigation/native";
 
 export default function PostItem({ text, userId, postImg, likeCount }) {
   const dispatch = useDispatch();
+  const nav = useNavigation();
   const [user, setUser] = useState([]);
   const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
@@ -36,7 +38,11 @@ export default function PostItem({ text, userId, postImg, likeCount }) {
                   className="w-[32px] h-[32px] rounded-full object-cover"
                   source={{ uri: ud.profile_img }}
                 />
-                <Text>{ud.nickname}</Text>
+                <Pressable
+                  onPress={() => nav.navigate("Profile", { userId: userId })}
+                >
+                  <Text>{ud.nickname}</Text>
+                </Pressable>
               </View>
               <View>
                 <Entypo name="dots-three-vertical" size={14} color="black" />
@@ -99,13 +105,17 @@ export default function PostItem({ text, userId, postImg, likeCount }) {
               </Text>
             </View>
             <View className="ml-2">
-              <Text className="flex-row gap-x-2 font-semibold text-xs">
-                {nickname}{" "}
-                <Text className="font-normal flex-1 flex-wrap">{text}</Text>
-              </Text>
+              <Pressable
+                onPress={() => nav.navigate("Profile", { userId: userId })}
+              >
+                <Text className="flex-row gap-x-2 font-semibold text-xs">
+                  {nickname}{" "}
+                  <Text className="font-normal flex-1 flex-wrap">{text}</Text>
+                </Text>
+              </Pressable>
             </View>
             <View>
-              <Pressable>
+              <Pressable onPress={() => dispatch(toggleCommentModal())}>
                 <Text className="text-xs text-gray-500">
                   View all 14 comments
                 </Text>

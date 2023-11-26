@@ -28,6 +28,7 @@ export default function App() {
         >
           <Stack.Screen name="MainScreen" component={MainScreen} />
           <Stack.Screen name="SinglePost" component={SinglePost} />
+          <Stack.Screen name="Profile" component={Profile} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

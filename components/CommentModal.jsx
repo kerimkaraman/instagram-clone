@@ -13,6 +13,7 @@ export default function CommentModal() {
         animationType="slide"
         transparent={true}
         className="mt-[300px]"
+        onRequestClose={() => dispatch(toggleCommentModal())}
       >
         <View
           style={{
@@ -28,7 +29,6 @@ export default function CommentModal() {
               dispatch(toggleCommentModal());
             }}
           />
-          <Text>Deneme</Text>
         </View>
       </Modal>
     </View>

@@ -1,15 +1,19 @@
 import { View, Text, SafeAreaView, Image, Pressable } from "react-native";
-import React from "react";
 import AddPost from "../assets/svg/AddPost";
 import ProfileDetailItem from "../components/ProfileDetailItem";
 import ProfileTabs from "./ProfileTabs";
+import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Profile({ route }) {
   const { isUser } = route.params;
-
+  const nav = useNavigation();
   return (
     <SafeAreaView className="bg-white flex-1">
       <View className="flex-row items-center justify-between px-4">
+        <Pressable onPress={() => nav.goBack()}>
+          <Ionicons name="arrow-back" size={24} color="black" />
+        </Pressable>
         <Text className="font-semibold text-2xl">
           {isUser ? "kerimkaraman" : null}
         </Text>
@@ -48,7 +52,7 @@ export default function Profile({ route }) {
           </Pressable>
         </View>
       ) : null}
-      <ProfileTabs />
+      <ProfileTabs isUser={isUser} />
     </SafeAreaView>
   );
 }

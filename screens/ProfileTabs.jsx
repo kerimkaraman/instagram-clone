@@ -6,11 +6,12 @@ import Posts from "../assets/svg/Posts";
 import Tagged from "../assets/svg/TaggedIcon";
 import ProfileTagged from "./ProfileTagged";
 
-export default function ProfileTabs() {
+export default function ProfileTabs({ isUser }) {
   const Tab = createMaterialTopTabNavigator();
   return (
     <Tab.Navigator className="mt-5">
       <Tab.Screen
+        initialParams={{ isUser: isUser }}
         options={{
           title: () => {
             return <Posts />;
@@ -20,6 +21,7 @@ export default function ProfileTabs() {
         component={ProfilePosts}
       />
       <Tab.Screen
+        initialParams={{ isUser: isUser }}
         options={{
           title: () => {
             return <Tagged />;
