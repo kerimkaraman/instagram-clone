@@ -1,9 +1,7 @@
 import { Image, View } from "react-native";
 import Animated, { useSharedValue, withSpring } from "react-native-reanimated";
 import { NavigationContainer } from "@react-navigation/native";
-
 import Homepage from "./screens/Homepage";
-
 import ReelsIcon from "./assets/svg/ReelsIcon";
 import AddPost from "./assets/svg/AddPost";
 import HomeIcon from "./assets/svg/HomeIcon";
@@ -16,6 +14,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainScreen from "./screens/MainScreen";
 import SinglePost from "./components/SinglePost";
 import UserProfile from "./screens/UserProfile";
+import MessagesScreen from "./screens/MessagesScreen";
 export default function App() {
   const Stack = createNativeStackNavigator();
 
@@ -30,6 +29,7 @@ export default function App() {
           <Stack.Screen name="MainScreen" component={MainScreen} />
           <Stack.Screen name="SinglePost" component={SinglePost} />
           <Stack.Screen name="Profile" component={UserProfile} />
+          <Stack.Screen name="Messages" component={MessagesScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

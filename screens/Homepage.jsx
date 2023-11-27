@@ -1,4 +1,11 @@
-import { View, Text, SafeAreaView, ScrollView, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  FlatList,
+  Pressable,
+} from "react-native";
 import React from "react";
 import StoryItem from "../components/StoryItem";
 import { posts, users } from "../data";
@@ -9,7 +16,7 @@ import MessageIcon from "../assets/svg/MessageIcon";
 import CommentModal from "../components/CommentModal";
 import ShareModal from "../components/ShareModal";
 
-export default function Homepage() {
+export default function Homepage({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1 }} className="bg-white">
       <ScrollView>
@@ -17,7 +24,13 @@ export default function Homepage() {
           <TextLogo />
           <View className="flex-row gap-x-5 items-center">
             <HeartIcon fillColor="white" />
-            <MessageIcon />
+            <Pressable
+              onPress={() => {
+                navigation.navigate("Messages");
+              }}
+            >
+              <MessageIcon />
+            </Pressable>
           </View>
         </View>
         <FlatList

@@ -260,3 +260,13 @@ export const users = [
       "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_.jpg",
   },
 ];
+
+export const messageStatus = [
+  "Active 5h ago",
+  "Sent a reel by Instagram",
+  "Seen Saturday",
+  "Liked a message",
+  "Active now",
+  "Wow. That's great !",
+  "Reacted 😁 to your message",
+];

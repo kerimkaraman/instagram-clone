@@ -8,7 +8,7 @@ export default function ProfileReels() {
       <View className="p-4 border rounded-full">
         <ReelsIcon />
       </View>
-      <Text>There are no posts that tagged.</Text>
+      <Text>There are no posts that is reels.</Text>
     </View>
   );
 }

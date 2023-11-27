@@ -12,7 +12,7 @@ const SaveIcon = (props) => (
     <G clipPath="url(#clip0_1_80)">
       <Path
         d="M20 21L12 13.44L4 21V3H20V21Z"
-        stroke="#262626"
+        stroke="black"
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"

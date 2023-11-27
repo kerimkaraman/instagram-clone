@@ -24,6 +24,7 @@ import SendIcon from "../assets/svg/SendIcon";
 import SaveIcon from "../assets/svg/SaveIcon";
 import Carousel from "react-native-reanimated-carousel";
 import AddComment from "./AddComment";
+
 export default function SinglePost({ route }) {
   const { postId, userId } = route.params;
   const [user, setUser] = useState([]);
