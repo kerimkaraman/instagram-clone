@@ -1,5 +1,4 @@
-import { View, Text, Image, TextInput, StyleSheet } from "react-native";
-import React, { useState } from "react";
+import { View, Text, Image, TextInput } from "react-native";
 
 export default function AddComment() {
   return (

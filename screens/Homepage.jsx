@@ -1,6 +1,5 @@
 import {
   View,
-  Text,
   SafeAreaView,
   ScrollView,
   FlatList,

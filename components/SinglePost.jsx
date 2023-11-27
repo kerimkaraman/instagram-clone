@@ -4,7 +4,6 @@ import {
   SafeAreaView,
   Pressable,
   Image,
-  ImageBackground,
   TouchableOpacity,
   Dimensions,
 } from "react-native";
@@ -13,7 +12,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { posts, users } from "../data";
 import { Entypo } from "@expo/vector-icons";
-import Swiper from "react-native-swiper";
 import HeartIcon from "../assets/svg/HeartIcon";
 import { useDispatch } from "react-redux";
 import CommentIcon from "../assets/svg/CommentIcon";
