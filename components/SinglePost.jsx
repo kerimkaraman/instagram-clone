@@ -63,11 +63,17 @@ export default function SinglePost({ route }) {
                 className="w-[28px] h-[28px] object-cover rounded-full"
                 source={{ uri: profile_img }}
               />
-              <Text className="font-medium text-xs">{nickname}</Text>
+              <Pressable
+                onPress={() => {
+                  nav.navigate("Profile", { userId: userId });
+                }}
+              >
+                <Text className="font-medium text-xs">{nickname}</Text>
+              </Pressable>
             </View>
             <View className="flex-row items-center gap-x-4">
-              <Pressable className="bg-[#d8d9d9] py-1 px-2 self-start rounded-md">
-                <Text>Follow</Text>
+              <Pressable className="bg-[#d8d9d9] py-1 px-4 self-start rounded-md">
+                <Text className="text-xs">Follow</Text>
               </Pressable>
               <Entypo name="dots-three-vertical" size={20} color="black" />
             </View>
@@ -133,9 +139,15 @@ export default function SinglePost({ route }) {
                 </Text>
               </View>
               <View>
-                <Text className="font-semibold text-xs">
-                  {username} <Text className="font-normal">{postDesc}</Text>
-                </Text>
+                <Pressable
+                  onPress={() => {
+                    nav.navigate("Profile", { userId: userId });
+                  }}
+                >
+                  <Text className="font-semibold text-xs">
+                    {username} <Text className="font-normal">{postDesc}</Text>
+                  </Text>
+                </Pressable>
               </View>
               <View>
                 <Pressable onPress={() => dispatch(toggleCommentModal())}>
